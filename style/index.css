@@ -1,4 +1,363 @@
-body {
-    background-color: #f7f6fd;
-    padding: 10px;
+/* :root {
+    max-width: 100%;
+} */
+
+@media screen and (min-width: 320px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        background-color: #E9ECF8;
+    }
+
+    #redes {
+        display: flex;
+    }
+
+    #quien {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1rem;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        color: #535353;
+        line-height: 1.5rem;
+    }
+
+    #lin {
+        margin-left: 1rem;
+        color: #535353;
+    }
+
+    #git {
+        margin-left: 1rem;
+        color: #535353;
+    }
+
+    }
+
+    #logo {
+        display: grid;
+        place-items: center;
+        margin: 2rem 0 2rem 0;
+    }
+
+    #base {
+        position: relative;
+        max-width: 100vw;
+    }
+
+    #texto-aqui {
+        padding-left: 2%;
+    }
+
+    #entrada, #entrada:focus {
+        font-size: 3rem;
+        font-family: 'Ubuntu', sans-serif;
+        color: #002d64;
+        background-color: #F3F5FC;
+        box-sizing: border-box;
+        padding: 3rem;
+        height: 30rem;
+        width: 98%;
+        resize:none;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin: 0;
+        filter: drop-shadow(0 0 1rem rgba(139, 141, 248, 0.171));
+    }
+
+    .btn {
+        display: grid;
+        place-items: center;
+    }
+
+    #botones {
+        display: grid;
+        place-items: center;
+    }
+
+    p {
+        font-size: 1.3rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bolder;
+        color: rgb(59, 59, 59);
+    }
+
+    #btnEncriptar {
+        display: block;
+        font-size: 1rem;
+        font-family: 'Chivo Mono', monospace;
+        color: white;
+        background-color: #0A3871;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 1.5rem 3.5rem 1.5rem;
+    }
+
+    #btnDesencriptar {
+        font-size: 1rem;
+        font-family: 'Chivo Mono', monospace;
+        color: white;
+        background-color: #0A3871;
+        border: 1px solid white;
+        border-radius: 20px;
+        margin-top: 1rem;
+        padding: 1.5rem 3.5rem 1.5rem;
+    } 
+
+    #returnCript {
+        position: relative;
+        margin-top: 3rem;
+    }
+
+    #returnDescript {
+        padding-left: 2%;
+    }
+
+    #returnCript {
+        font-size: 3rem;
+        font-family: 'Ubuntu', sans-serif;
+        color: #002d64;
+        background-color: #F3F5FC;
+        box-sizing: border-box;
+        padding: 3rem;
+        height: 30rem;
+        width: 98%;
+        resize:none;
+        outline: none;
+        pointer-events: none;
+        border: none;
+        border-radius: 10px;
+        margin: 0;
+        filter: drop-shadow(0 0 1rem rgba(139, 141, 248, 0.171));
+    }
+
+    #copy {
+        display: none;
+        position: absolute;
+        font-size: 1.5rem;
+        top: 0.7rem;
+        right: 3rem;
+        padding: 0.7em;
+        border: 1px solid;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #dibujo {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        top: -28rem;
+        width: 20rem;
+        padding: 0.7em;
+        pointer-events: none;
+    }
+
+    #nose {
+        display: block;
+        position: relative;
+        font-size: 2rem;
+        top: -28rem;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        color: #002d64;
+    }
+
+    #btnEncriptar:hover {
+        color: #0A3871;
+        background-color: #F3F5FC;
+        border: 0.1em solid #0A3871;
+        cursor: pointer;
+    }
+    
+    #btnDesencriptar:hover {
+        color: #0A3871;
+        background-color: #F3F5FC;
+        border: 0.1em solid #0A3871;
+        cursor: pointer;
+    }
+
+    #lin:hover {
+        color:#0A3871;
+    }
+
+    #git:hover {
+        color: #0A3871;
+    }
+
+    #copy:active {
+        font-size: 1.4rem;
+    }
+
+
+@media screen and (min-width: 1200px) {
+
+    html {
+        font-size: 25px;
+    }
+
+    body {
+        background-color: #E9ECF8;
+    }
+
+    #quien {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.7rem;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        color: #535353;
+        line-height: 1.5rem;
+    }
+
+    #lin {
+        margin-left: 0.5rem;
+    }
+
+    #git {
+        margin-left: 0.5rem;
+    }
+
+    #logo {
+        display: block;
+        margin: 0 0 1rem 1rem;
+    }
+
+    #base {
+        display: flex;
+        position: relative;
+        max-width: 100vw;
+    }
+
+    #texto-aqui {
+        padding-left: 3%;
+    }
+
+    #entrada, #entrada:focus {
+        font-size: 1rem;
+        font-family: 'Ubuntu', sans-serif;
+        color: #002d64;
+        background-color: #F3F5FC;
+        box-sizing: border-box;
+        padding: 1.3rem;
+        height: 19rem;
+        width: 45vw;
+        resize:none;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        margin: 0;
+        filter: drop-shadow(0 0 1rem rgba(139, 141, 248, 0.171));
+    }
+
+    #btn {
+        display: block;
+    }
+
+    #botones {
+        display: flex;
+    }
+
+    p {
+        font-size: 0.6rem;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bolder;
+        color: rgb(59, 59, 59);
+        padding-left: 1rem;
+    }
+
+    #btnEncriptar {
+        font-size: 1rem;
+        font-family: 'Chivo Mono', monospace;
+        color: white;
+        background-color: #0A3871;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 0.5rem 1rem 0.5rem;
+    }
+
+    #btnDesencriptar {
+        font-size: 1rem;
+        font-family: 'Chivo Mono', monospace;
+        color: white;
+        background-color: #0A3871;
+        border: 1px solid white;
+        border-radius: 20px;
+        margin-top: 0;
+        margin-left: 0.5rem;
+        padding: 0.5rem 1rem 0.5rem;
+    } 
+
+    #returnCript {
+        position: relative;
+        margin-top: 0;
+    }
+
+    #returnCript {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+
+    #returnCript{
+        font-size: 1rem;
+        font-family: 'Ubuntu', sans-serif;
+        color: #002d64;
+        background-color: #F3F5FC;
+        box-sizing: border-box;
+        padding: 1.3rem;
+        height: 19rem;
+        width: 45vw;
+        resize:none;
+        outline: none;
+        pointer-events: none;
+        border: none;
+        border-radius: 10px;
+        margin: 0;
+        filter: drop-shadow(0 0 1rem rgba(139, 141, 248, 0.171));
+    }
+
+    #copy {
+        display: none;
+        position: absolute;
+        font-size: 0.8rem;
+        top: 0.6rem;
+        right: 0.8rem;
+        padding: 0.7em;
+        border: 1px solid;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #dibujo {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        top: -19rem;
+        width: 13rem;
+        padding: 0.7em;
+        pointer-events: none;
+    }
+
+    #nose {
+        display: block;
+        position: relative;
+        font-size: 1rem;
+        top: -19rem;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        color: #002d64;
+    }
+
+    #copy:active {
+        font-size: 0.7rem;
+    }
 }

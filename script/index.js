@@ -1,85 +1,25 @@
-/**
- * 
- * @param {*} string 
- * @returns 
- */
-
-
-// Algoritmo de encriptación O(n)
-// Finalizado
 function encriptador(string) {
-    let stringEncriptado = '';
-    for (let i = 0; i < string.length; i++) {
-        // Valindando que solo sean letras
-        // FIXED: Error de lógica
-        // TODO: Mejorar la validación
-        if ((string.charCodeAt(i) < 97 && string.charCodeAt(i) != 32) || (string.charCodeAt(i) > 122 && string.charCodeAt(i) != 32)) {
-            return document.getElementById("returnCript").value = "Error: Solo se aceptan letras";
-        }
-        // Encriptando
-        stringEncriptado += string.charAt(i);
-        switch (string.charAt(i)) {
-            case "a":
-                stringEncriptado+= "i"
-                break;
-            case "e":
-                stringEncriptado+= "nter"
-                break;
-            case "i":
-                stringEncriptado+= "mes"
-                break;
-            case "o":
-                stringEncriptado+= "ber"
-                break;
-            case "u":
-                stringEncriptado+= "fat"
-                break;
-            default:
-                break;
-        }
-    }
+    mensaje = document.getElementById("encriptar").value;
+    const mensajeEncriptado = mensaje
+        .replace(/e/g, "enter")
+        .replace(/i/g, "imes")
+        .replace(/a/g, "ai")
+        .replace(/o/g, "ober")
+        .replace(/u/g, "ufat");
     document.getElementById("encriptar").value = "";
-    return document.getElementById("returnCript").value = stringEncriptado;
+    return document.getElementById("returnCript").value = mensajeEncriptado;
 }
 
-
-    
 function desencriptador(string) {
-    let stringDesencriptado = '';
-    // Valindando que solo sean letras
-    for (let i = 0; i < string.length; i++) {
-        if ((string.charCodeAt(i) < 97 && string.charCodeAt(i) != 32) || (string.charCodeAt(i) > 122 && string.charCodeAt(i) != 32)) {
-            return document.getElementById("returnCript").value = "Error: Solo se aceptan letras";
-        }
-        // Desencriptando
-        switch (string.charAt(i)) {
-            case "a":
-                stringDesencriptado+= string.charAt(i);
-                i++;
-                break;
-            case "e":
-                stringDesencriptado+= "e"
-                i+=4;	
-                break;
-            case "i":
-                stringDesencriptado+= "i"
-                i+=3;
-                break;
-            case "o":
-                stringDesencriptado+= "o"
-                i+=3;
-                break;
-            case "u":
-                stringDesencriptado+= "u"
-                i+=3;
-                break;
-            default:
-                stringDesencriptado += string.charAt(i);
-                break;
-        }
-    }
-    document.getElementById("encriptar").value = "";
-    return document.getElementById("returnCript").value = stringDesencriptado;
+    mensaje = document.getElementById("encriptar").value;
+    const mensajeDesencriptado = mensaje
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+        document.getElementById("encriptar").value = "";
+    return document.getElementById("returnCript").value = mensajeDesencriptado;
 }
 
 function copiar(){
@@ -88,6 +28,3 @@ function copiar(){
     copyText.setSelectionRange(0, 99999)
     navigator.clipboard.writeText(copyText.value)
 }
-
-// Path: index.html
-// Logica de la pagina
