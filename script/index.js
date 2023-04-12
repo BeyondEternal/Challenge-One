@@ -9,7 +9,7 @@ function encriptador() {
     document.querySelector(".init").style.display = "none";
     document.querySelector(".btnCopiar").style.display = "flex";
     document.getElementById("encriptar").value = "";
-    return document.getElementById("returnCript").value = mensajeEncriptado;
+    return document.getElementById("returnCript").value = mensajeEncriptado + "\r\n";
 }
 
 function desencriptador() {
@@ -21,7 +21,7 @@ function desencriptador() {
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
         document.getElementById("encriptar").value = "";
-    return document.getElementById("returnCript").value = mensajeDesencriptado;
+    return document.getElementById("returnCript").value = mensajeDesencriptado + "\r\n";
 }
 
 function copiar(){
