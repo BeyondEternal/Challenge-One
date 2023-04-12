@@ -1,4 +1,4 @@
-function encriptador(string) {
+function encriptador() {
     mensaje = document.getElementById("encriptar").value;
     const mensajeEncriptado = mensaje
         .replace(/e/g, "enter")
@@ -6,11 +6,13 @@ function encriptador(string) {
         .replace(/a/g, "ai")
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
+    document.querySelector(".init").style.display = "none";
+    document.querySelector(".btnCopiar").style.display = "flex";
     document.getElementById("encriptar").value = "";
     return document.getElementById("returnCript").value = mensajeEncriptado;
 }
 
-function desencriptador(string) {
+function desencriptador() {
     mensaje = document.getElementById("encriptar").value;
     const mensajeDesencriptado = mensaje
         .replace(/enter/g, "e")
