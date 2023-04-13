@@ -57,7 +57,6 @@ section {
     font-family: sans-serif;
     background-color: #E9ECF8;
 }
-
 .btnCopiar {
     position: absolute;
     bottom: 10px;
@@ -77,6 +76,25 @@ section {
     width: 90%;
 }
 .btnCopiar:hover {
+    background-color: #E9ECF8; 
+}
+.btnCopiarMobile {
+    bottom: 10px;
+    display: none;
+    width: 90%;    
+    justify-content: center;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    background-color: #192471;
+    color: #fff;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+.btnCopiarMobile > button {
+    width: 90%;
+}
+.btnCopiarMobile:hover {
     background-color: #E9ECF8; 
 }
 .buttons {
@@ -155,6 +173,7 @@ footer > img {
 
 
 @media (max-height: 700px) {
+
     .main {
         flex-direction: column;
         gap: 20px;

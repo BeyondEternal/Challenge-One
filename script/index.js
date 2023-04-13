@@ -7,7 +7,12 @@ function encriptador() {
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
     document.querySelector(".init").style.display = "none";
-    document.querySelector(".btnCopiar").style.display = "flex";
+    if (isMobile()) {
+        document.querySelector(".btnCopiarMobile").style.display = "flex";            
+    }
+    else {
+        document.querySelector(".btnCopiar").style.display = "flex";
+    }
     document.getElementById("encriptar").value = "";
     return document.getElementById("returnCript").value = mensajeEncriptado + "\r\n";
 }
@@ -21,7 +26,12 @@ function desencriptador() {
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
         document.querySelector(".init").style.display = "none";
-        document.querySelector(".btnCopiar").style.display = "flex";
+        if (isMobile()) {
+            document.querySelector(".btnCopiarMobile").style.display = "flex";            
+        }
+        else {
+            document.querySelector(".btnCopiar").style.display = "flex";
+        }
         document.getElementById("encriptar").value = "";
     return document.getElementById("returnCript").value = mensajeDesencriptado + "\r\n";
 }
@@ -31,4 +41,8 @@ function copiar(){
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     navigator.clipboard.writeText(copyText.value)
+}
+
+function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 }
