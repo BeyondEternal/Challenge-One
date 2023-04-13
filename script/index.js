@@ -20,6 +20,8 @@ function desencriptador() {
         .replace(/ai/g, "a")
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
+        document.querySelector(".init").style.display = "none";
+        document.querySelector(".btnCopiar").style.display = "flex";
         document.getElementById("encriptar").value = "";
     return document.getElementById("returnCript").value = mensajeDesencriptado + "\r\n";
 }
