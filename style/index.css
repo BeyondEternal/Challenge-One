@@ -65,37 +65,20 @@ section {
     left: 50%;
     transform: translateX(-50%);
     justify-content: center;
-    border: none;
     outline: none;
-    background-color: #192471;
-    color: #fff;
-    font-size: 1.5rem;
+    background-color: #FFF;
+    color: #000;
+    border: #192471 1px solid;
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: 10px;
 }
 .btnCopiar > button {
     width: 90%;
 }
 .btnCopiar:hover {
-    background-color: #E9ECF8; 
-}
-.btnCopiarMobile {
-    bottom: 10px;
-    display: none;
-    width: 90%;    
-    justify-content: center;
-    margin: 0 auto;
-    border: none;
-    outline: none;
     background-color: #192471;
     color: #fff;
-    font-size: 1.5rem;
-    border-radius: 10px;
-}
-.btnCopiarMobile > button {
-    width: 90%;
-}
-.btnCopiarMobile:hover {
-    background-color: #E9ECF8; 
 }
 .buttons {
     width: 100%;
